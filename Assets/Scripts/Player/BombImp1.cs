@@ -19,7 +19,7 @@ public class BombImp1 : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 nextFire = Time.time + cooldownTime;
-                Instantiate(Bomb, Player.transform.position, Quaternion.identity);
+                Instantiate(Bomb, new Vector3(Player.transform.position.x + 1f, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
             }
         }
     }
