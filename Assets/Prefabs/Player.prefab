@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2039612515759269618}
   - component: {fileID: 4212809933042871757}
   - component: {fileID: 2039612515759269610}
+  - component: {fileID: 1995891712}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -191,13 +192,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4396756984850605461}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 772fee7d3f0c8ac4188e99c1eece4791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Bomb: {fileID: 1159949231364935591, guid: a697fc909b0f11641aa04c92f35b6c07, type: 3}
   Player: {fileID: 4396756984850605461}
+  cooldownTime: 2
 --- !u!114 &4212809933042871757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,3 +228,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slider: {fileID: 0}
   phealth: {fileID: 0}
+--- !u!114 &1995891712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396756984850605461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2dd68979b31f4b86ae8fb0d9f50d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bomb: {fileID: 1159949231364935591, guid: a697fc909b0f11641aa04c92f35b6c07, type: 3}
+  Player: {fileID: 4396756984850605461}
+  cooldownTime: 2
+  minimumShootForce: 100
+  maximumShootForce: 700

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1152400981859938470}
   - component: {fileID: -236385025134556396}
   - component: {fileID: 1821483172}
-  - component: {fileID: 318439730}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -131,19 +130,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!65 &318439730
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159949231364935591}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2385462034887168691
 GameObject:
   m_ObjectHideFlags: 0
