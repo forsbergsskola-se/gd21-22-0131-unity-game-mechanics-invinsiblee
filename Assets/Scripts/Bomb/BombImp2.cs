@@ -45,7 +45,7 @@ public class BombImp2 : MonoBehaviour
         nextFire = Time.time + cooldownTime;
 
         var bombInstance = Instantiate(Bomb,
-            new Vector3(Player.transform.position.x + 1f, Player.transform.position.y, Player.transform.position.z),
+            new Vector3(Player.transform.position.x + 1, Player.transform.position.y, Player.transform.position.z),
             Quaternion.identity);
         bombInstance.GetComponent<Rigidbody>().AddForce(chargeShoot,0,0);
     }
