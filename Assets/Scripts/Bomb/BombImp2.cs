@@ -27,7 +27,7 @@ public class BombImp2 : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                chargeProgress += Time.deltaTime / shootChargeTime;
+                chargeProgress += Time.deltaTime;
             }
 
             if (Input.GetButtonUp("Fire1"))
