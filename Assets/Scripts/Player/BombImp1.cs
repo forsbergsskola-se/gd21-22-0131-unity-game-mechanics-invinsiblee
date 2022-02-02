@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BombImp1 : MonoBehaviour
 {
     public GameObject Bomb;
     public GameObject Player;
+    private float nextFire = 0;
+    public float cooldownTime = 2;
 
     void Start()
     {
@@ -14,9 +14,13 @@ public class BombImp1 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+        if (Time.time > nextFire)
         {
-            Instantiate(Bomb, Player.transform.position, Quaternion.identity);
+            if (Input.GetButton("Fire1"))
+            {
+                nextFire = Time.time + cooldownTime;
+                Instantiate(Bomb, Player.transform.position, Quaternion.identity);
+            }
         }
     }
 }

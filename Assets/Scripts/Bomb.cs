@@ -39,10 +39,10 @@ public class Bomb : MonoBehaviour
         {
             enemy.GetComponent<Health>().currentHealth -= 50;
         }
-        else if (other.CompareTag("Player"))
+        /*else if (other.CompareTag("Player"))
         {
             player.GetComponent<Health>().currentHealth -= 50;
-        }
+        }*/
         else if (other.CompareTag("Obstacle"))
         {
             //destroy
