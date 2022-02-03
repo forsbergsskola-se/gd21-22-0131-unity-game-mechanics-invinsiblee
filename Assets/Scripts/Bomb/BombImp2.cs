@@ -14,7 +14,7 @@ public class BombImp2 : MonoBehaviour
     public float minimumShootForce;
     public float maximumShootForce;
     public float chargeProgress = 0f;
-    public float chargeShoot;
+    public float chargeShot;
 
     void Start()
     {
@@ -25,11 +25,10 @@ public class BombImp2 : MonoBehaviour
     {
         if (Time.time > nextFire)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire1"))
             {
-                chargeProgress += Time.deltaTime;
+                chargeProgress += Time.time / shootChargeTime;
             }
-
             if (Input.GetButtonUp("Fire1"))
             {
                 Shoot();
@@ -39,7 +38,7 @@ public class BombImp2 : MonoBehaviour
 
     void Shoot()
     {
-        chargeShoot = Mathf.Lerp(minimumShootForce, maximumShootForce, chargeProgress);
+        chargeShot = Mathf.Clamp(chargeProgress, minimumShootForce, maximumShootForce);
         chargeProgress = 0f;
         
         nextFire = Time.time + cooldownTime;
@@ -47,6 +46,6 @@ public class BombImp2 : MonoBehaviour
         var bombInstance = Instantiate(Bomb,
             new Vector3(Player.transform.position.x + 1, Player.transform.position.y, Player.transform.position.z),
             Quaternion.identity);
-        bombInstance.GetComponent<Rigidbody>().AddForce(chargeShoot,0,0);
+        bombInstance.GetComponent<Rigidbody>().AddForce(chargeShot,0,0);
     }
 }
