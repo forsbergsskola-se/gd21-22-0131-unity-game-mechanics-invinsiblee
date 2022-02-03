@@ -243,8 +243,8 @@ MonoBehaviour:
   Bomb: {fileID: 1159949231364935591, guid: a697fc909b0f11641aa04c92f35b6c07, type: 3}
   Player: {fileID: 4396756984850605461}
   cooldownTime: 2
-  shootChargeTime: 2
+  shootChargeTime: 80
   minimumShootForce: 200
   maximumShootForce: 700
-  chargeProgress: 0
+  chargeProgress: 200
   chargeShot: 0

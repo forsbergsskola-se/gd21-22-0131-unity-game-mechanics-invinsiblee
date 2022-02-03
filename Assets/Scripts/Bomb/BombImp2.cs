@@ -27,7 +27,7 @@ public class BombImp2 : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
-                chargeProgress += Time.time / shootChargeTime;
+                chargeProgress += Time.deltaTime * shootChargeTime;
             }
             if (Input.GetButtonUp("Fire1"))
             {
@@ -39,7 +39,7 @@ public class BombImp2 : MonoBehaviour
     void Shoot()
     {
         chargeShot = Mathf.Clamp(chargeProgress, minimumShootForce, maximumShootForce);
-        chargeProgress = 0f;
+        chargeProgress = 200f;
         
         nextFire = Time.time + cooldownTime;
 
