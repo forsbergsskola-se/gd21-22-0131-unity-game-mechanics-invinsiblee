@@ -14,7 +14,7 @@ public class Bomb : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         transform.GetChild(0).gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
 }
