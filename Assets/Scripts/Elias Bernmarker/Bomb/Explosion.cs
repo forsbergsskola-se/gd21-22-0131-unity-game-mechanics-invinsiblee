@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour
@@ -21,10 +18,10 @@ public class Explosion : MonoBehaviour
         {
             enemy.GetComponent<Health>().currentHealth -= 50;
         }
-        /*else if (other.CompareTag("Player"))
+        else if (other.CompareTag("Player"))
         {
             player.GetComponent<Health>().currentHealth -= 50;
-        }*/
+        }
         else if (other.CompareTag("Obstacle"))
         {
             //destroy

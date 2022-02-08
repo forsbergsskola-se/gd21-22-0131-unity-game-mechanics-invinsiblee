@@ -1,19 +1,27 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveTowardsPlayer : MonoBehaviour
 {
-    [SerializeField] private CommandContainer commanContainer;
-    [SerializeField] private Transform playerTransform;
+    private Transform playerTransform;
+    public float withinRange;
+    public float speed;
+
+    private void Start()
+    {
+        playerTransform = GameObject.Find("Player").GetComponent<Transform>();
+    }
 
     private void Update()
     {
-        //To get targets vector position
-        var directionToPlayer = playerTransform.position - transform.position;
-        directionToPlayer.Normalize();
-        var horizontalDiretion = directionToPlayer.x;
-        commanContainer.walkCommand = horizontalDiretion;
+        AttackRange();
+    }
+
+    void AttackRange()
+    {
+        float dist = Vector3.Distance(playerTransform.position, transform.position);
+        if (dist <= withinRange)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(playerTransform.position.x, transform.position.y, transform.position.z), speed * Time.deltaTime);
+        }
     }
 }

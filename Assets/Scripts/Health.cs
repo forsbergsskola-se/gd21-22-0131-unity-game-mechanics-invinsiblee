@@ -1,11 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     public float maxHealth;
     public float currentHealth;
+    public UIHealth healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +23,9 @@ public class Health : MonoBehaviour
 
     public void TakeDamage()
     {
+        if (this == CompareTag("Player"))
+        {
+            healthBar.SetHealth(currentHealth);
+        }
     }
-
 }

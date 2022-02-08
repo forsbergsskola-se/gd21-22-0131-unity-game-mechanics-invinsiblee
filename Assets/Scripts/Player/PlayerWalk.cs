@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerWalk : MonoBehaviour
 {
     private Rigidbody _rigidbody;
-    [SerializeField] private CommandContainer commandContainer;
     
     [Header("Movement")]
     public float moveSpeed;
