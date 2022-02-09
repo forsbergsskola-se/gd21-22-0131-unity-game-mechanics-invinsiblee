@@ -14,11 +14,11 @@ public class Explosion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Playanimation
-        if (other.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             enemy.GetComponent<Health>().currentHealth -= 50;
         }
-        else if (other.CompareTag("Player"))
+        else if (other.gameObject.CompareTag("Player"))
         {
             player.GetComponent<Health>().currentHealth -= 50;
         }
