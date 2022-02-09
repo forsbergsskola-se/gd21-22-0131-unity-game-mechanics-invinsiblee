@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombImp2 : MonoBehaviour
+public class Implementation_2_Bomb : MonoBehaviour
 {
     public GameObject Bomb;
     public GameObject Player;

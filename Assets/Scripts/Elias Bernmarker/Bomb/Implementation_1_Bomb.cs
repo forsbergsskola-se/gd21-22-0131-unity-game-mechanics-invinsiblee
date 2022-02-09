@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BombImp1 : MonoBehaviour
+public class Implementation_1_Bomb : MonoBehaviour
 {
     public GameObject Bomb;
     public GameObject Player;
